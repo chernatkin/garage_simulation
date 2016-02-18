@@ -7,10 +7,6 @@ import org.glassfish.jersey.server.ResourceConfig;
 
 public class ApplicationConfig extends ResourceConfig {
     
-    /*public ApplicationConfig() {
-        this(new Properties());
-    }*/
-    
     public ApplicationConfig(Properties props) {
         register(new ApplicationBinder(props));
         packages("org.chernatkin.garage.simulation");

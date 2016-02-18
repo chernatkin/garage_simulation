@@ -29,7 +29,6 @@ public class ApplicationBinder extends AbstractBinder {
     protected void configure() {
         bind(GarageDao.class).to(GarageDao.class).in(Singleton.class);
         bind(GarageService.class).to(GarageService.class).in(Singleton.class);
-        //bind(ConfigurationContext.class).to(ConfigurationContext.class);
         bindFactory(new DataSourceFactory(props.getProperty(DB_URL), 
                                           props.getProperty(DB_LOGIN),
                                           props.getProperty(DB_PASSWORD),

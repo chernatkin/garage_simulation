@@ -19,19 +19,6 @@ public class JettyEmbeddedServer {
         
         JettyHttpContainerFactory.createServer(baseUri, new ApplicationConfig(props))
                                  .join();
-        
-        /*Server jettyServer = new Server(8080);
-        
-        WebAppContext context = new WebAppContext();
-        context.setDescriptor("D:\\java\\workspace_http\\garage_simulation\\src\\main\\webapp\\WEB-INF\\web.xml");
-        context.setResourceBase("D:\\java\\workspace_http\\garage_simulation\\src\\main\\webapp");
-        context.setContextPath("/");
-        context.setParentLoaderPriority(true);
-        
-        jettyServer.setHandler(context);
- 
-        jettyServer.start();
-        jettyServer.join();*/
     }
 
     private static Properties readProperties() throws IOException {
